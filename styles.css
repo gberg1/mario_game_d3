@@ -15,14 +15,25 @@ body {
   background-size: 100% 100%;
 }
 
-.pipe {
+.startpipe {
   position: absolute;
-  background-image: url('pipe.png');
+  background-image: url('startpipe.png');
+  background-size: 100% 100%;
+  height: 150px;
+  width: 150px;
+  float: left;
+}
+
+
+/*.endpipe {
+  position: absolute;
+  background-image: url('endpipe.png');
   background-size: 100% 100%;
   height: 30px;
   width: 30px;
-  top: 200px;
-}
+  top: 800px;
+  left: 800px;
+}*/
 
 .ghost {
   background-image: url('ghost.png');
