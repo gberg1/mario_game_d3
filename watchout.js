@@ -59,6 +59,13 @@ var ghosts = board.selectAll('.ghosts')
     height: pixelize(settings.r*2)
   });
 
+// var pipe = board.selectAll('.swing')
+//   .transition()
+//   .duration(100)
+//   .style({
+//     ()
+//   })
+
 board.on('mousemove', function() {
   var loc = d3.mouse(this);
   mouse = { x: loc[0], y: loc[1] };
@@ -69,7 +76,7 @@ board.on('mousemove', function() {
 });
 
 var move = function(element) {
-  element.transition().duration(settings.duration).style({
+  element.transition().duration(2500).style({
     top: randY,
     left: randX
   }).each('end', function() {
@@ -81,7 +88,7 @@ move(ghosts);
 
 var scoreTicker = function() {
   score = score + 1;
-  highscore = Math.max(score, highScore);
+  highScore = Math.max(score, highScore);
   updateScore();
 };
 setInterval(scoreTicker, 100);
@@ -107,7 +114,7 @@ var detectCollisions = function() {
       collisionCount =collisionCount + 1;
     }
   } else {
-    board.style('background-color', 'white');
+    board.style('background-image', 'white');
   }
   prevCollision = collision;
 };
